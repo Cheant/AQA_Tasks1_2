@@ -4,28 +4,28 @@ namespace Tasks12Library
 {
     public class InsertShape
     {
-        public double circleArea;
-        public double squareArea;
+        public double CircleArea;
+        public double SquareArea;
 
-        public InsertShape(double circlearea, double squarearea)
+        public InsertShape(double circleArea, double squareArea)
         {
-            circleArea = circlearea;
-            squareArea = squarearea;
+            CircleArea = circleArea;
+            SquareArea = squareArea;
         }
 
         public void PrintResult()
         {
-            if (Math.Sqrt(circleArea / Math.PI) < Math.Sqrt(squareArea) / 2)
+            if (Math.Sqrt(CircleArea / Math.PI) <= Math.Sqrt(SquareArea) / 2)
             {
-                Console.WriteLine($"It is possible to put the circle into the square");
+                Console.WriteLine($"It is possible to put the Circle into the Square");
             }
-            else if (Math.Sqrt(circleArea / Math.PI) > Math.Sqrt(squareArea / 2))
+            else if (Math.Sqrt(CircleArea / Math.PI) >= Math.Sqrt(SquareArea / 2))
             {
-                Console.WriteLine($"It is possible to put the square into the circle");
+                Console.WriteLine($"It is possible to put the Square into the Circle");
             }
             else
             {
-                Console.WriteLine($"It is impossible to put the circle into the square or the square into the circle");
+                Console.WriteLine($"It is impossible to put the Circle into the Square or the Square into the Circle");
             }
         }
     }

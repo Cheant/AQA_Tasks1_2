@@ -7,11 +7,6 @@ namespace Tasks12Library
         private bool isDouble;
         private double validatedValue;
 
-        public Validation(string inputValue)
-        {
-            isDouble = double.TryParse(inputValue, out validatedValue);
-        }
-
         public double ValidatedValue
         {
             get
@@ -24,8 +19,10 @@ namespace Tasks12Library
             }
         }
 
-        public void GetValidatedValue()
+        public double GetValidatedValue()
         {
+            isDouble = double.TryParse(Console.ReadLine(), out validatedValue);
+
             for (int i = 0; i < 3; i++)
             {
                 if (isDouble && ValidatedValue > 0)
@@ -43,6 +40,7 @@ namespace Tasks12Library
                     isDouble = double.TryParse(Console.ReadLine(), out validatedValue);
                 }
             }
+            return ValidatedValue;
         }
     }
 }

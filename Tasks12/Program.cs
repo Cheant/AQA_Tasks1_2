@@ -8,17 +8,13 @@ namespace Tasks12
         static void Main(string[] args)
         {
             Console.WriteLine("Enter Radius of Circle: ");
-            Validation validation1 = new Validation(Console.ReadLine());
-            validation1.GetValidatedValue();
-
-            Calculation circleCalculation = new Calculation(validation1.ValidatedValue);
+            Validation validation1 = new Validation();
+            Calculation circleCalculation = new Calculation(validation1.GetValidatedValue());
             circleCalculation.CalculateCircleArea();
 
             Console.WriteLine("Enter Side of Square: ");
-            Validation validation2 = new Validation(Console.ReadLine());
-            validation2.GetValidatedValue();
-
-            Calculation squareCalculation = new Calculation(validation2.ValidatedValue);
+            Validation validation2 = new Validation();
+            Calculation squareCalculation = new Calculation(validation2.GetValidatedValue());
             squareCalculation.CalculateSquareArea();
 
             InsertShape insertShape = new InsertShape(circleCalculation.AreaResult, squareCalculation.AreaResult);

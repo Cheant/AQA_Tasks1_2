@@ -4,7 +4,7 @@
     ".NETCoreApp,Version=v3.0": {
       "Tasks12Library/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v3.0",
+        "framework": ".NETStandard,Version=v2.0",
         "compile": {
           "bin/placeholder/Tasks12Library.dll": {}
         },
@@ -27,19 +27,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\AntonC\\.nuget\\packages\\": {}
+    "C:\\Users\\Myrmex13\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\AntonC\\source\\repos\\Tasks12\\Tasks12\\Tasks12.csproj",
+      "projectUniqueName": "C:\\Users\\Myrmex13\\source\\repos\\Tasks12\\Tasks12\\Tasks12.csproj",
       "projectName": "Tasks12",
-      "projectPath": "C:\\Users\\AntonC\\source\\repos\\Tasks12\\Tasks12\\Tasks12.csproj",
-      "packagesPath": "C:\\Users\\AntonC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\AntonC\\source\\repos\\Tasks12\\Tasks12\\obj\\",
+      "projectPath": "C:\\Users\\Myrmex13\\source\\repos\\Tasks12\\Tasks12\\Tasks12.csproj",
+      "packagesPath": "C:\\Users\\Myrmex13\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Myrmex13\\source\\repos\\Tasks12\\Tasks12\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\AntonC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Myrmex13\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -52,8 +52,8 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "C:\\Users\\AntonC\\source\\repos\\Tasks12\\Tasks12Library\\Tasks12Library.csproj": {
-              "projectPath": "C:\\Users\\AntonC\\source\\repos\\Tasks12\\Tasks12Library\\Tasks12Library.csproj"
+            "C:\\Users\\Myrmex13\\source\\repos\\Tasks12\\Tasks12Library\\Tasks12Library.csproj": {
+              "projectPath": "C:\\Users\\Myrmex13\\source\\repos\\Tasks12\\Tasks12Library\\Tasks12Library.csproj"
             }
           }
         }

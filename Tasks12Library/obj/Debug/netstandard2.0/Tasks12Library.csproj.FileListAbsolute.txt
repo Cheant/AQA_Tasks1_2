@@ -1,8 +1,0 @@
-C:\Users\Myrmex13\source\repos\Tasks12\Tasks12Library\obj\Debug\netstandard2.0\Tasks12Library.AssemblyInfoInputs.cache
-C:\Users\Myrmex13\source\repos\Tasks12\Tasks12Library\obj\Debug\netstandard2.0\Tasks12Library.AssemblyInfo.cs
-C:\Users\Myrmex13\source\repos\Tasks12\Tasks12Library\bin\Debug\netstandard2.0\Tasks12Library.deps.json
-C:\Users\Myrmex13\source\repos\Tasks12\Tasks12Library\bin\Debug\netstandard2.0\Tasks12Library.dll
-C:\Users\Myrmex13\source\repos\Tasks12\Tasks12Library\bin\Debug\netstandard2.0\Tasks12Library.pdb
-C:\Users\Myrmex13\source\repos\Tasks12\Tasks12Library\obj\Debug\netstandard2.0\Tasks12Library.dll
-C:\Users\Myrmex13\source\repos\Tasks12\Tasks12Library\obj\Debug\netstandard2.0\Tasks12Library.pdb
-C:\Users\Myrmex13\source\repos\Tasks12\Tasks12Library\obj\Debug\netstandard2.0\Tasks12Library.csprojAssemblyReference.cache

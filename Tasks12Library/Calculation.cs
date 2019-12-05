@@ -4,49 +4,43 @@ namespace Tasks12Library
 {
     public class Calculation
     {
-        private double parameter;
-        public double Area;
+        private double validatedValue;
 
-        public Calculation(double inputParameter)
+        public double GetValidation()
         {
-            parameter = inputParameter;
-        }
-
-        public double InputParameter
-        {
-            get
+            for (int i = 0; i < 3; i++)
             {
-                return parameter;
+                if (double.TryParse(Console.ReadLine(), out validatedValue) && validatedValue > 0)
+                {
+                    break;
+                }
+                else if (i == 2)
+                {
+                    Random randomNumber = new Random();
+                    validatedValue = Convert.ToDouble(randomNumber.Next(5, 51) / 10.0);
+                }
+                else
+                {
+                    Console.WriteLine("Entered value is invalid. Please enter a positive numeric value: ");
+                }
             }
-            private set
-            {
-                parameter = value;
-            }
+            return Math.Round(validatedValue, 2);
         }
 
-        public double AreaResult
+        public void PrintResult(double circleArea, double squareArea)
         {
-            get
+            if (Math.Sqrt(circleArea / Math.PI) <= Math.Sqrt(squareArea) / 2)
             {
-                return Area;
+                Console.WriteLine($"It is possible to put the Circle into the Square");
             }
-            private set
+            else if (Math.Sqrt(circleArea / Math.PI) >= Math.Sqrt(squareArea / 2))
             {
-                Area = value;
+                Console.WriteLine($"It is possible to put the Square into the Circle");
+            }
+            else
+            {
+                Console.WriteLine($"It is impossible to put the Circle into the Square or the Square into the Circle");
             }
         }
-
-        public void CalculateCircleArea()
-        {
-            AreaResult = Math.Round(Math.PI * Math.Pow(InputParameter, 2), 2);
-            Console.WriteLine($"Radius: {InputParameter}, Circle Area: {AreaResult}\n");
-        }
-
-        public void CalculateSquareArea()
-        {
-            AreaResult = Math.Round(Math.Pow(InputParameter, 2), 2);
-            Console.WriteLine($"Side: {InputParameter}, Square Area: {AreaResult}\n");
-        }
-
     }
 }

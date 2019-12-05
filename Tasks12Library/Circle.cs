@@ -28,17 +28,12 @@ namespace Tasks12Library
         {
             get
             {
-                return area;
-            }
-            private set
-            {
-                area = value;
+                return Math.Round(Math.PI * Math.Pow(Radius, 2), 2);
             }
         }
 
-        public void CircleArea()
+        public void PrintCircleArea()
         {
-            Area = Math.Round(Math.PI * Math.Pow(Radius, 2), 2);
             Console.WriteLine($"Radius: {Radius}, Circle Area: {Area}\n");
         }
     }

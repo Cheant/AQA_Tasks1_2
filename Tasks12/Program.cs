@@ -11,11 +11,11 @@ namespace Tasks12
 
             Console.WriteLine("Enter Radius of Circle: ");
             Circle circle = new Circle(calculation.GetValidation());
-            circle.CircleArea();
+            circle.PrintCircleArea();
 
             Console.WriteLine("Enter Side of Square: ");
             Square square = new Square(calculation.GetValidation());
-            square.SquareArea();
+            square.PrintSquareArea();
 
             calculation.PrintResult(circle.Area, square.Area);
 

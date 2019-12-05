@@ -28,17 +28,12 @@ namespace Tasks12Library
         {
             get
             {
-                return area;
-            }
-            private set
-            {
-                area = value;
+                return Math.Round(Math.Pow(Side, 2), 2);
             }
         }
 
-        public void SquareArea()
+        public void PrintSquareArea()
         {
-            Area = Math.Round(Math.Pow(Side, 2), 2);
             Console.WriteLine($"Side: {Side}, Square Area: {Area}\n");
         }
     }

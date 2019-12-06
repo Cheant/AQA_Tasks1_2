@@ -4,23 +4,24 @@ namespace Tasks12Library
 {
     public class Circle
     {
-        private double radius;
-        public double area;
+        private double _radius;
+        private double _area;
 
         public Circle(double inputRadius)
         {
-            radius = inputRadius;
+            Radius = inputRadius;
+            Area = CalculateCircleArea(Radius);
         }
 
         public double Radius
         {
             get
             {
-                return radius;
+                return _radius;
             }
             private set
             {
-                radius = value;
+                _radius = value;
             }
         }
 
@@ -28,11 +29,20 @@ namespace Tasks12Library
         {
             get
             {
-                return Math.Round(Math.PI * Math.Pow(Radius, 2), 2);
+                return _area;
+            }
+            private set
+            {
+                _area = value;
             }
         }
 
-        public void PrintCircleArea()
+        private double CalculateCircleArea(double radius)
+        {
+            return Math.Round(Math.PI * Math.Pow(Radius, 2), 2);
+        }
+
+        public void PrintRadiusCircleArea()
         {
             Console.WriteLine($"Radius: {Radius}, Circle Area: {Area}\n");
         }

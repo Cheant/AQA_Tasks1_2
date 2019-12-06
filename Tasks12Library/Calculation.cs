@@ -4,42 +4,54 @@ namespace Tasks12Library
 {
     public class Calculation
     {
-        private double validatedValue;
+        private double _validatedValue = 0;
 
-        public double GetValidation()
+        public double GetValidatedValue(string valueName, string figureName)
         {
             for (int i = 0; i < 3; i++)
             {
-                if (double.TryParse(Console.ReadLine(), out validatedValue) && validatedValue > 0)
+                Console.WriteLine($"Enter {valueName} of {figureName}: ");
+                if (!(double.TryParse(Console.ReadLine(), out _validatedValue)))
                 {
-                    break;
+                    Console.WriteLine("Entered value is not number.\n");
+                    continue;
                 }
-                else if (i == 2)
+                if (_validatedValue <= 0)
                 {
-                    Random randomNumber = new Random();
-                    validatedValue = Convert.ToDouble(randomNumber.Next(5, 51) / 10.0);
+                    Console.WriteLine("Entered value is negative or zero.\n");
+                    continue;
                 }
-                else
-                {
-                    Console.WriteLine("Entered value is invalid. Please enter a positive numeric value: ");
-                }
+                break;
             }
-            return Math.Round(validatedValue, 2);
+
+            if (_validatedValue <= 0)
+            {
+                Console.WriteLine("Random value will be set after three failed attempts.\n");
+                _validatedValue = GetRandomNumber();
+            }
+            return Math.Round(_validatedValue, 2);
         }
 
-        public void PrintResult(double circleArea, double squareArea)
+        private double GetRandomNumber()
+        {
+            Random random = new Random();
+            return random.NextDouble() * (Constants.randomMaximum - Constants.randomMinimum) + Constants.randomMinimum;
+            //return Convert.ToDouble(randomNumber.Next(5, 51) / 10.0);
+        }
+
+        public void PrintInsertFigureResult(double circleArea, double squareArea)
         {
             if (Math.Sqrt(circleArea / Math.PI) <= Math.Sqrt(squareArea) / 2)
             {
-                Console.WriteLine($"It is possible to put the Circle into the Square");
+                Console.WriteLine($"It is possible to put the Circle into the Square.");
             }
             else if (Math.Sqrt(circleArea / Math.PI) >= Math.Sqrt(squareArea / 2))
             {
-                Console.WriteLine($"It is possible to put the Square into the Circle");
+                Console.WriteLine($"It is possible to put the Square into the Circle.");
             }
             else
             {
-                Console.WriteLine($"It is impossible to put the Circle into the Square or the Square into the Circle");
+                Console.WriteLine($"It is impossible to put the Circle into the Square or the Square into the Circle.");
             }
         }
     }

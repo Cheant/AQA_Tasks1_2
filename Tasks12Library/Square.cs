@@ -4,23 +4,24 @@ namespace Tasks12Library
 {
     public class Square
     {
-        public double area;
-        private double side;
+        private double _side;
+        private double _area;
 
         public Square(double inputSide)
         {
-            side = inputSide;
+            Side = inputSide;
+            Area = CalculateSquareArea(Side);
         }
 
         public double Side
         {
             get
             {
-                return side;
+                return _side;
             }
             private set
             {
-                side = value;
+                _side = value;
             }
         }
 
@@ -28,11 +29,20 @@ namespace Tasks12Library
         {
             get
             {
-                return Math.Round(Math.Pow(Side, 2), 2);
+                return _area;
+            }
+            private set
+            {
+                _area = value;
             }
         }
 
-        public void PrintSquareArea()
+        private double CalculateSquareArea(double side)
+        {
+            return Math.Round(Math.Pow(Side, 2), 2);
+        }
+
+        public void PrintSideSquareArea()
         {
             Console.WriteLine($"Side: {Side}, Square Area: {Area}\n");
         }

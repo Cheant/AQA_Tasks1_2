@@ -9,15 +9,13 @@ namespace Tasks12
         {
             Calculation calculation = new Calculation();
 
-            Console.WriteLine("Enter Radius of Circle: ");
-            Circle circle = new Circle(calculation.GetValidation());
-            circle.PrintCircleArea();
+            Circle circle = new Circle(calculation.GetValidatedValue("Radius", "Circle"));
+            circle.PrintRadiusCircleArea();
 
-            Console.WriteLine("Enter Side of Square: ");
-            Square square = new Square(calculation.GetValidation());
-            square.PrintSquareArea();
+            Square square = new Square(calculation.GetValidatedValue("Side", "Square"));
+            square.PrintSideSquareArea();
 
-            calculation.PrintResult(circle.Area, square.Area);
+            calculation.PrintInsertFigureResult(circle.Area, square.Area);
 
             Console.ReadKey();
         }

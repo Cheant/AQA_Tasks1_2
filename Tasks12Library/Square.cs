@@ -39,12 +39,12 @@ namespace Tasks12Library
 
         private double CalculateSquareArea(double side)
         {
-            return Math.Round(Math.Pow(Side, 2), 2);
+            return Math.Pow(Side, 2);
         }
 
         public void PrintSideSquareArea()
         {
-            Console.WriteLine($"Side: {Side}, Square Area: {Area}{Environment.NewLine}");
+            Console.WriteLine($"Side: {Side}, Square Area: {Math.Round(Area, 2)}{Environment.NewLine}");
         }
     }
 }

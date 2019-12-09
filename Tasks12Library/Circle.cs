@@ -39,12 +39,12 @@ namespace Tasks12Library
 
         private double CalculateCircleArea(double radius)
         {
-            return Math.Round(Math.PI * Math.Pow(Radius, 2), 2);
+            return (Math.PI * Math.Pow(Radius, 2));
         }
 
         public void PrintRadiusCircleArea()
         {
-            Console.WriteLine($"Radius: {Radius}, Circle Area: {Area}{Environment.NewLine}");
+            Console.WriteLine($"Radius: {Radius}, Circle Area: {Math.Round(Area, 2)}{Environment.NewLine}");
         }
     }
 }

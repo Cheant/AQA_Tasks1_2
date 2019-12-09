@@ -9,10 +9,10 @@ namespace Tasks12
         {
             Calculation calculation = new Calculation();
 
-            Circle circle = new Circle(calculation.GetValidatedValue("Radius", "Circle"));
+            Circle circle = new Circle(calculation.GetNotNegativeValue("Radius", "Circle"));
             circle.PrintRadiusCircleArea();
 
-            Square square = new Square(calculation.GetValidatedValue("Side", "Square"));
+            Square square = new Square(calculation.GetNotNegativeValue("Side", "Square"));
             square.PrintSideSquareArea();
 
             calculation.PrintInsertFigureResult(circle.Area, square.Area);

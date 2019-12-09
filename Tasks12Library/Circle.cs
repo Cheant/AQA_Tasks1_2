@@ -44,7 +44,7 @@ namespace Tasks12Library
 
         public void PrintRadiusCircleArea()
         {
-            Console.WriteLine($"Radius: {Radius}, Circle Area: {Area}\n");
+            Console.WriteLine($"Radius: {Radius}, Circle Area: {Area}{Environment.NewLine}");
         }
     }
 }

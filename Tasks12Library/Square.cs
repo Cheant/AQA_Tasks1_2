@@ -44,7 +44,7 @@ namespace Tasks12Library
 
         public void PrintSideSquareArea()
         {
-            Console.WriteLine($"Side: {Side}, Square Area: {Area}\n");
+            Console.WriteLine($"Side: {Side}, Square Area: {Area}{Environment.NewLine}");
         }
     }
 }

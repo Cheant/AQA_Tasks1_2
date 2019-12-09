@@ -4,32 +4,31 @@ namespace Tasks12Library
 {
     public class Calculation
     {
-        private double _validatedValue = 0;
 
-        public double GetValidatedValue(string valueName, string figureName)
+        public double GetNotNegativeValue(string valueName, string figureName)
         {
-            for (int i = 0; i < 3; i++)
+            for (int i = 1; i <= 3; i++)
             {
                 Console.WriteLine($"Enter {valueName} of {figureName}: ");
-                if (!(double.TryParse(Console.ReadLine(), out _validatedValue)))
+                var enteredValue = Console.ReadLine();
+                bool isParsed = double.TryParse(enteredValue, out double validatedValue);
+                if (isParsed && validatedValue > 0)
                 {
-                    Console.WriteLine("Entered value is not number.\n");
-                    continue;
+                    return Math.Round(validatedValue, 2);
                 }
-                if (_validatedValue <= 0)
-                {
-                    Console.WriteLine("Entered value is negative or zero.\n");
-                    continue;
-                }
-                break;
-            }
 
-            if (_validatedValue <= 0)
-            {
-                Console.WriteLine("Random value will be set after three failed attempts.\n");
-                _validatedValue = GetRandomNumber();
+                if (!isParsed)
+                {
+                    Console.WriteLine($"Entered value is not number.{Environment.NewLine}");
+                }
+
+                if (isParsed && validatedValue <= 0)
+                {
+                    Console.WriteLine($"Entered value is negative or zero.{Environment.NewLine}");
+                }
             }
-            return Math.Round(_validatedValue, 2);
+            Console.WriteLine($"Random value will be set after three failed attempts.{Environment.NewLine}");
+            return Math.Round(GetRandomNumber());
         }
 
         private double GetRandomNumber()
